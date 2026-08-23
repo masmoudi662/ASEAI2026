@@ -1,32 +1,20 @@
-import { GraduationCap, Target, Users2, Building2 } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const SummerSchool = () => {
+  // TODO(content-decision): program structure is "Decision required" per the ASEAI 2026 Shared Fact Sheet.
+  // The concept note defines 5 pillars (emerging SE/AI trends, student mentoring, new-faculty mentoring,
+  // poster/demo track, AI/SE certifications). The draft defines ~14 scientific tracks (LLM-powered
+  // development, agentic software engineering, responsible AI, empirical methods, etc.) plus keynotes,
+  // workshops, posters, demos, and a Doctoral Symposium. Whether the 14 tracks sit under the 5 pillars,
+  // and whether certifications remain part of the 2026 program, is not yet confirmed. The 2025 site's
+  // "four main pillars" wording was itself inconsistent with its own concept note's 5 pillars — not
+  // carrying that error forward. Do not publish a specific structure until the organizers confirm one.
   const features = [
-    {
-      icon: GraduationCap,
-      title: "Research Talks",
-      description:
-        "Emerging topics in Software Engineering and AI presented by world-class researchers and practitioners.",
-    },
-    {
-      icon: Users2,
-      title: "Research Student Mentoring",
-      description:
-        "Direct mentoring opportunities with leading researchers to guide your research journey.",
-    },
-    {
-      icon: Target,
-      title: "New Faculty Mentoring",
-      description:
-        "Support and guidance for new faculty members entering the field of AI and Software Engineering.",
-    },
-    {
-      icon: Building2,
-      title: "AI Certifications",
-      description:
-        "Earn certifications with NVIDIA to validate your skills in AI and computational intelligence.",
-    },
+    { title: "[PROGRAM PILLAR/TRACK 1 — PENDING]" },
+    { title: "[PROGRAM PILLAR/TRACK 2 — PENDING]" },
+    { title: "[PROGRAM PILLAR/TRACK 3 — PENDING]" },
+    { title: "[PROGRAM PILLAR/TRACK 4 — PENDING]" },
   ];
 
   return (
@@ -40,7 +28,7 @@ const SummerSchool = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The winter school is built around four main pillars
+              [PROGRAM STRUCTURE — PENDING APPROVAL: pillars vs. tracks, certification status]
             </p>
           </div>
 
@@ -49,19 +37,16 @@ const SummerSchool = () => {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="border-0 shadow-lg opacity-60"
                 style={{ boxShadow: "var(--card-shadow)" }}
               >
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-primary/10 rounded-lg">
-                      <feature.icon className="h-6 w-6 text-primary" />
+                      <HelpCircle className="h-6 w-6 text-primary" />
                     </div>
                     <div className="space-y-2">
                       <h3 className="text-xl font-semibold">{feature.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {feature.description}
-                      </p>
                     </div>
                   </div>
                 </CardContent>
