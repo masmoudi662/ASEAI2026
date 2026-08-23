@@ -5,22 +5,20 @@ import { ExternalLink } from "lucide-react";
 import registrationQR from "@/assets/registration-qr.png";
 
 const Registration = () => {
-  // TODO(content-decision): 2026 fee categories/amounts pending approval — do not publish figures until confirmed.
   const nonResidentFees = [
-    { category: "Virtual Attendance", fee: "[FEE — PENDING APPROVAL]" },
+    { category: "Virtual Attendance", fee: "[FEE/POLICY — PENDING (remote policy not yet decided)]" },
   ];
 
   const residentFees = [
-    { category: "🎓 Student or Postdoctoral Fellow", fee: "[FEE — PENDING APPROVAL]" },
-    { category: "🧑‍🏫 Faculty / Researcher", fee: "[FEE — PENDING APPROVAL]" },
-    { category: "🏢 Industry Participant", fee: "[FEE — PENDING APPROVAL]" },
+    { category: "🎓 Student or Postdoctoral Fellow", fee: "500 MAD" },
+    { category: "🧑‍🏫 Faculty / Researcher", fee: "500 MAD" },
+    { category: "🏢 Industry Participant", fee: "[FEE — PENDING (not yet decided)]" },
   ];
 
   return (
     <section id="registration" className="py-20 md:py-32 bg-muted/30">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto space-y-12">
-          {/* Header */}
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">Registration</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
@@ -29,7 +27,6 @@ const Registration = () => {
             </p>
           </div>
 
-          {/* Registration CTA */}
           <Card className="border-2 border-primary/20 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
             <CardContent className="p-8">
               <div className="flex flex-col md:flex-row items-center gap-8">
@@ -39,29 +36,19 @@ const Registration = () => {
                     Fill out our registration form to join this transformative event. 
                     Early registration is recommended as spots are limited.
                   </p>
-                  <Button 
-                    size="lg" 
-                    className="gap-2"
-                    asChild
-                  >
-                    {/* TODO(content-decision): 2026 registration form URL pending approval */}
-                    <a 
-                      href="#" 
-                      aria-disabled="true"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                  <Button size="lg" className="gap-2" asChild>
+                    <a href="#" aria-disabled="true" onClick={(e) => e.preventDefault()}>
                       Register Now [REGISTRATION URL — PENDING]
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </Button>
                 </div>
                 <div className="flex-shrink-0">
-                  {/* TODO(assets): 2026 registration QR code not yet generated — depends on final registration URL */}
                   <div className="block">
                     <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                      <img 
-                        src={registrationQR} 
-                        alt="[PLACEHOLDER] Registration Form QR Code — pending 2026 registration URL" 
+                      <img
+                        src={registrationQR}
+                        alt="[PLACEHOLDER] Registration Form QR Code — pending 2026 registration URL"
                         className="w-32 h-32 md:w-40 md:h-40 opacity-40"
                       />
                       <p className="text-xs text-center mt-2 text-muted-foreground">QR pending final registration URL</p>
@@ -72,13 +59,11 @@ const Registration = () => {
             </CardContent>
           </Card>
 
-          {/* Registration Fees */}
           <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
             <CardHeader>
               <CardTitle className="text-2xl">Registration Fees</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              {/* Non-residents */}
               <div>
                 <h3 className="text-lg font-semibold mb-3">Non-residents in Morocco</h3>
                 <div className="overflow-x-auto">
@@ -93,9 +78,7 @@ const Registration = () => {
                       {nonResidentFees.map((item, index) => (
                         <tr key={index} className="border-b last:border-0">
                           <td className="py-3 px-4">{item.category}</td>
-                          <td className="py-3 px-4 text-right font-semibold text-primary">
-                            {item.fee}
-                          </td>
+                          <td className="py-3 px-4 text-right font-semibold text-primary">{item.fee}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -103,7 +86,6 @@ const Registration = () => {
                 </div>
               </div>
 
-              {/* Residents */}
               <div>
                 <h3 className="text-lg font-semibold mb-3">Residents in Morocco</h3>
                 <div className="overflow-x-auto">
@@ -118,9 +100,7 @@ const Registration = () => {
                       {residentFees.map((item, index) => (
                         <tr key={index} className="border-b last:border-0">
                           <td className="py-3 px-4">{item.category}</td>
-                          <td className="py-3 px-4 text-right font-semibold text-primary">
-                            {item.fee}
-                          </td>
+                          <td className="py-3 px-4 text-right font-semibold text-primary">{item.fee}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -142,13 +122,16 @@ const Registration = () => {
             </CardContent>
           </Card>
 
-          {/* Registration Deadline */}
           <div className="text-center">
             <Card className="inline-block border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
               <CardContent className="p-6 space-y-4">
                 <p className="text-lg">
-                  <span className="text-muted-foreground">Registration deadline:</span>{" "}
-                  <span className="font-bold text-primary text-xl">[APPROVED DEADLINE — PENDING]</span>
+                  <span className="text-muted-foreground">Registration opens:</span>{" "}
+                  <span className="font-bold text-primary text-xl">August 3, 2026</span>
+                </p>
+                <p className="text-lg">
+                  <span className="text-muted-foreground">Application deadline:</span>{" "}
+                  <span className="font-bold text-primary text-xl">September 15, 2026 (or capacity)</span>
                 </p>
                 <div className="bg-amber-500/10 border border-amber-500/20 p-4 rounded-lg">
                   <p className="text-sm font-medium text-amber-900 dark:text-amber-100">
@@ -156,16 +139,18 @@ const Registration = () => {
                   </p>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Admitted participants will be notified via email by [NOTIFICATION DATE — PENDING]
+                  Applications are reviewed in weekly batches; admitted participants are notified by email
+                  within 10 days of their batch. A place is guaranteed only after payment; unpaid seats
+                  are released after 7 days.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Application requires: identity, institution, category, a motivation statement (200
+                  words max), a CV (PDF), and — optionally — a poster/demo abstract.
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          {/* Payment Method */}
-          {/* TODO(content-decision): The 2025 bank details below (STB Bank, ATPU association, Sousse) were specific to
-              that edition and have been removed rather than carried forward. Replace with confirmed 2026 payment
-              details once approved (bank, beneficiary, IBAN/SWIFT, or an alternative payment process for Morocco). */}
           <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
             <CardHeader>
               <CardTitle className="text-2xl">Payment Details</CardTitle>
