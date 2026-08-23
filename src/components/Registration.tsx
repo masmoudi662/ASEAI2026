@@ -5,14 +5,15 @@ import { ExternalLink } from "lucide-react";
 import registrationQR from "@/assets/registration-qr.png";
 
 const Registration = () => {
+  // TODO(content-decision): 2026 fee categories/amounts pending approval — do not publish figures until confirmed.
   const nonResidentFees = [
-    { category: "Virtual Attendance", fee: "Free" },
+    { category: "Virtual Attendance", fee: "[FEE — PENDING APPROVAL]" },
   ];
 
   const residentFees = [
-    { category: "🎓 Student or Postdoctoral Fellow", fee: "250 TND" },
-    { category: "🧑‍🏫 Faculty / Researcher", fee: "350 TND" },
-    { category: "🏢 Industry Participant", fee: "500 TND" },
+    { category: "🎓 Student or Postdoctoral Fellow", fee: "[FEE — PENDING APPROVAL]" },
+    { category: "🧑‍🏫 Faculty / Researcher", fee: "[FEE — PENDING APPROVAL]" },
+    { category: "🏢 Industry Participant", fee: "[FEE — PENDING APPROVAL]" },
   ];
 
   return (
@@ -43,32 +44,29 @@ const Registration = () => {
                     className="gap-2"
                     asChild
                   >
+                    {/* TODO(content-decision): 2026 registration form URL pending approval */}
                     <a 
-                      href="https://forms.gle/VAE3EkRv3TdjWbdE8" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                      href="#" 
+                      aria-disabled="true"
+                      onClick={(e) => e.preventDefault()}
                     >
-                      Register Now
+                      Register Now [REGISTRATION URL — PENDING]
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </Button>
                 </div>
                 <div className="flex-shrink-0">
-                  <a 
-                    href="https://forms.gle/VAE3EkRv3TdjWbdE8" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
+                  {/* TODO(assets): 2026 registration QR code not yet generated — depends on final registration URL */}
+                  <div className="block">
                     <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                       <img 
                         src={registrationQR} 
-                        alt="Registration Form QR Code" 
-                        className="w-32 h-32 md:w-40 md:h-40"
+                        alt="[PLACEHOLDER] Registration Form QR Code — pending 2026 registration URL" 
+                        className="w-32 h-32 md:w-40 md:h-40 opacity-40"
                       />
-                      <p className="text-xs text-center mt-2 text-muted-foreground">Scan to register</p>
+                      <p className="text-xs text-center mt-2 text-muted-foreground">QR pending final registration URL</p>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -82,7 +80,7 @@ const Registration = () => {
             <CardContent className="space-y-6">
               {/* Non-residents */}
               <div>
-                <h3 className="text-lg font-semibold mb-3">Non-residents in Tunisia</h3>
+                <h3 className="text-lg font-semibold mb-3">Non-residents in Morocco</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
@@ -107,7 +105,7 @@ const Registration = () => {
 
               {/* Residents */}
               <div>
-                <h3 className="text-lg font-semibold mb-3">Residents in Tunisia</h3>
+                <h3 className="text-lg font-semibold mb-3">Residents in Morocco</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
@@ -149,8 +147,8 @@ const Registration = () => {
             <Card className="inline-block border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
               <CardContent className="p-6 space-y-4">
                 <p className="text-lg">
-                  <span className="text-muted-foreground">Extended registration deadline:</span>{" "}
-                  <span className="font-bold text-primary text-xl">7 November 2025</span>
+                  <span className="text-muted-foreground">Registration deadline:</span>{" "}
+                  <span className="font-bold text-primary text-xl">[APPROVED DEADLINE — PENDING]</span>
                 </p>
                 <div className="bg-amber-500/10 border border-amber-500/20 p-4 rounded-lg">
                   <p className="text-sm font-medium text-amber-900 dark:text-amber-100">
@@ -158,58 +156,30 @@ const Registration = () => {
                   </p>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Admitted participants will be notified via email by November 9th, 2025
+                  Admitted participants will be notified via email by [NOTIFICATION DATE — PENDING]
                 </p>
               </CardContent>
             </Card>
           </div>
 
           {/* Payment Method */}
+          {/* TODO(content-decision): The 2025 bank details below (STB Bank, ATPU association, Sousse) were specific to
+              that edition and have been removed rather than carried forward. Replace with confirmed 2026 payment
+              details once approved (bank, beneficiary, IBAN/SWIFT, or an alternative payment process for Morocco). */}
           <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
             <CardHeader>
-              <CardTitle className="text-2xl">Bank Payment Details</CardTitle>
+              <CardTitle className="text-2xl">Payment Details</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4 bg-muted/50 p-6 rounded-lg">
-                <div>
-                  <p className="text-sm text-muted-foreground">Bank Name</p>
-                  <p className="font-semibold">STB BANK (Société Tunisienne de Banque)</p>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Bank Address</p>
-                  <p className="font-semibold">SOUSSE MEDINA agency, Av. Sadok MKADDEM, 4054 Sahloul Sousse</p>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Beneficiary Account Name</p>
-                  <p className="font-semibold">ASSOCIATION ATPU</p>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Beneficiary Address</p>
-                  <p className="font-semibold">INSTITUT SUP DES SCIENCES APPLIQUES, 4000 ULA</p>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">MaF</p>
-                  <p className="font-mono text-sm">1925409 X P/N 000</p>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Swift Code</p>
-                  <p className="font-mono text-sm">STBKTNTT</p>
-                </div>
-                <div className="md:col-span-2">
-                  <p className="text-sm text-muted-foreground">IBAN</p>
-                  <p className="font-mono text-sm">TN59 1050 8051 1060 7277 8878</p>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Currency</p>
-                  <p className="font-semibold">TND (Tunisian Dinar)</p>
-                </div>
+              <div className="bg-muted/50 p-6 rounded-lg">
+                <p className="text-sm text-muted-foreground">[PAYMENT DETAILS — PENDING APPROVAL]</p>
               </div>
 
               <div className="bg-primary/10 p-4 rounded-lg">
                 <p className="text-sm font-medium">
                   Please send a copy of the payment receipt to:{" "}
-                  <a href="mailto:africa.aseai@gmail.com" className="text-primary hover:underline">
-                    africa.aseai@gmail.com
+                  <a href="mailto:[CONTACT EMAIL — PENDING APPROVAL]" className="text-primary hover:underline">
+                    [CONTACT EMAIL — PENDING APPROVAL]
                   </a>
                 </p>
               </div>

@@ -25,22 +25,23 @@ const Hero = () => {
       <div className="container relative z-10 px-4 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom duration-700">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            1st African Winter School on Software Engineering & AI
+            {/* TODO(content-decision): title wording pending approval — conflicts: edition ordinal, "Winter" vs alternative, ASEAI vs AEAI acronym, "Software Engineering & AI" vs "Software Engineering and Intelligence" */}
+            [EVENT TITLE — PENDING APPROVAL]
           </h1>
           <p className="text-2xl md:text-3xl font-semibold text-white/95">
-            ASEAI 2025
+            ASEAI 2026
           </p>
 
           {/* Date and Location */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-lg md:text-xl">
             <div className="flex items-center gap-2">
               <Calendar className="h-6 w-6" />
-              <span>November 24-26, 2025</span>
+              <span>September 28-30, 2026</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-white/30" />
             <div className="flex items-center gap-2">
               <MapPin className="h-6 w-6" />
-              <span>Novation City, Sousse, Tunisia (Hybrid)</span>
+              <span>ENSIAS, Mohammed V University, Rabat, Morocco (Hybrid)</span>
             </div>
           </div>
 
