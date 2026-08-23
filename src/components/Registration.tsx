@@ -6,13 +6,15 @@ import registrationQR from "@/assets/registration-qr.png";
 
 const Registration = () => {
   const nonResidentFees = [
-    { category: "Virtual Attendance", fee: "[FEE/POLICY — PENDING (remote policy not yet decided)]" },
+    { category: "🌐 Remote Participant", fee: "[Free or reduced rate — à décider, per source]" },
   ];
 
   const residentFees = [
-    { category: "🎓 Student or Postdoctoral Fellow", fee: "500 MAD" },
-    { category: "🧑‍🏫 Faculty / Researcher", fee: "500 MAD" },
-    { category: "🏢 Industry Participant", fee: "[FEE — PENDING (not yet decided)]" },
+    { category: "🎓 PhD Student", fee: "500 MAD" },
+    { category: "🎓 Master's / Final-Year Engineering Student", fee: "500 MAD" },
+    { category: "🧑‍🏫 Researcher / Faculty", fee: "500 MAD" },
+    { category: "🌍 International (non-Moroccan)", fee: "500 MAD" },
+    { category: "🏢 Industry Professional", fee: "500 MAD — professional rate à décider, per source" },
   ];
 
   return (
@@ -65,7 +67,7 @@ const Registration = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold mb-3">Non-residents in Morocco</h3>
+                <h3 className="text-lg font-semibold mb-3">Remote Participation</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
@@ -87,7 +89,7 @@ const Registration = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3">Residents in Morocco</h3>
+                <h3 className="text-lg font-semibold mb-3">On-Site Participation</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
