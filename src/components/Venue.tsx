@@ -1,7 +1,6 @@
 import { MapPin, Train, Car, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import sousseCity from "@/assets/sousse-city.jpg";
 
 const Venue = () => {
   return (
@@ -15,82 +14,68 @@ const Venue = () => {
           </div>
 
           {/* Venue Info */}
+          {/* TODO(assets): no approved ENSIAS/Rabat venue photo yet — using the built-in placeholder.svg
+              rather than carrying the old Sousse cityscape image forward. */}
           <Card className="border-0 shadow-lg overflow-hidden" style={{ boxShadow: "var(--card-shadow)" }}>
-            <div className="relative h-64 md:h-80">
+            <div className="relative h-64 md:h-80 bg-muted flex items-center justify-center">
               <img
-                src={sousseCity}
-                alt="Sousse, Tunisia cityscape showing historic architecture and Mediterranean coastline"
-                className="w-full h-full object-cover"
+                src={`${import.meta.env.BASE_URL}placeholder.svg`}
+                alt="[PLACEHOLDER — venue photo pending approval]"
+                className="h-24 w-24 opacity-30"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
             </div>
             <CardHeader className="-mt-16 relative z-10">
-              <CardTitle className="text-2xl">Novation City</CardTitle>
+              <CardTitle className="text-2xl">ENSIAS, Mohammed V University</CardTitle>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-5 w-5" />
-                <span>Sousse, Tunisia</span>
+                <span>Rabat, Morocco</span>
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
+                {/* TODO(content-decision): venue description, rooms, accessibility, and accommodation
+                    info pending — brief requires these but they are not yet confirmed. */}
                 <p className="text-foreground/80 leading-relaxed">
-                  Novation City is an innovative technology and business hub located 
-                  in Sousse, Tunisia. As a hybrid event, participants can join us either 
-                  in person at this state-of-the-art facility or remotely from anywhere 
-                  in the world.
-                </p>
-                <p className="text-foreground/80 leading-relaxed">
-                  The venue offers modern facilities and is designed to foster 
-                  collaboration and innovation, making it the perfect setting for 
-                  the African Winter School on Software Engineering & AI.
+                  [VENUE DESCRIPTION — PENDING APPROVAL]. As a hybrid event, participants can join us
+                  either in person at ENSIAS, Mohammed V University in Rabat, Morocco, or remotely from
+                  anywhere in the world.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Button asChild>
-                  <a
-                    href="https://maps.app.goo.gl/b1nvvHCXS1D7DYPy9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <MapPin className="h-4 w-4" />
-                    Open Map
-                  </a>
+                {/* TODO(content-decision): 2026 map link pending — old Novation City map link removed */}
+                <Button disabled>
+                  <MapPin className="h-4 w-4" />
+                  Map — [PENDING]
                 </Button>
               </div>
             </CardContent>
           </Card>
 
           {/* Transportation */}
+          {/* TODO(content-decision): the 2025 transportation section below was entirely Tunisia-specific
+              (Tunis–Sousse train, local taxi fares in TND, a Tunisian car-rental company) and has been
+              replaced with placeholders. Needs confirmed Rabat travel info (airport transfer, local
+              transit, accessibility) per the brief's Venue requirements. */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-center">How to Reach the Venue</h3>
 
             <div className="grid md:grid-cols-3 gap-6">
-              {/* By Train */}
               <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-primary/10 rounded-lg">
                       <Train className="h-6 w-6 text-primary" />
                     </div>
-                    <h4 className="text-lg font-semibold">By Train</h4>
+                    <h4 className="text-lg font-semibold">By Public Transit</h4>
                   </div>
                   <div className="space-y-3 text-sm">
-                    <p className="text-foreground/80">
-                      Take a train from Tunis to Sousse (approximately 2 hours).
-                    </p>
-                    <p className="font-medium text-primary">
-                      Fare: ~10-15 TND (~3-5 USD)
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      Trains run regularly throughout the day
-                    </p>
+                    <p className="text-foreground/80">[PENDING APPROVAL — Rabat transit directions]</p>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* By Taxi */}
               <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center gap-3">
@@ -100,17 +85,11 @@ const Venue = () => {
                     <h4 className="text-lg font-semibold">By Taxi</h4>
                   </div>
                   <div className="space-y-3 text-sm">
-                    <p className="text-foreground/80">
-                      Take a taxi within Sousse to reach Novation City.
-                    </p>
-                    <p className="font-medium text-primary">
-                      From Sousse center: ~10-15 TND (~3-5 USD)
-                    </p>
+                    <p className="text-foreground/80">[PENDING APPROVAL — local taxi guidance for Rabat]</p>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* By Car Sharing */}
               <Card className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center gap-3">
@@ -120,18 +99,7 @@ const Venue = () => {
                     <h4 className="text-lg font-semibold">By Car-Sharing</h4>
                   </div>
                   <div className="space-y-3 text-sm">
-                    <p className="text-foreground/80">
-                      Rent a car or minibus with a chauffeur.
-                    </p>
-                    <Button variant="outline" size="sm" className="w-full" asChild>
-                      <a
-                        href="https://coccinelle.tn/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Visit Coccinelle
-                      </a>
-                    </Button>
+                    <p className="text-foreground/80">[PENDING APPROVAL — car-rental/sharing options for Rabat]</p>
                   </div>
                 </CardContent>
               </Card>

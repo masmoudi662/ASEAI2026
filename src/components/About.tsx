@@ -54,33 +54,29 @@ const About = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
-          <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+                   <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+            {/* TODO(content-decision): mission text adapted to avoid "Winter School" wording (open conflict, see Hero.tsx). Replace with the approved 2026 concept note text once available. */}
             <p>
-              The Winter School brings world-class scholars from the globe to Africa, to share knowledge, inspire
+              ASEAI brings world-class scholars from the globe to Africa, to share knowledge, inspire
               creativity, and build lasting collaborations. Through interactive sessions, mentoring, and cutting-edge
-              talks, the mission of the school is to empower the next generation of students, researchers, and
+              talks, the mission of the event is to empower the next generation of students, researchers, and
               professionals with hands-on knowledge and deep insights into the future of Software Engineering in the era
               of AI.
             </p>
           </div>
 
-          {/* Event Flyer */}
+                    {/* Event Flyer */}
+          {/* TODO(assets): 2026 flyer not yet designed/approved. 2025 flyer shown as a dimmed placeholder only. */}
           <div className="mt-12 space-y-6">
             <img
               src={flyerImage}
-              alt="ASEAI 2025 - 1st African Winter School on Software Engineering & AI event flyer"
-              className="w-full rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+              alt="[PLACEHOLDER — 2025 flyer shown pending the approved 2026 flyer]"
+              className="w-full rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 opacity-50"
             />
             <div className="flex justify-center">
-              <Button asChild size="lg" className="gap-2">
-                <a
-                  href={`${import.meta.env.BASE_URL}aseai-2025-flyer.pdf`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="h-5 w-5" />
-                  View Event Flyer (PDF)
-                </a>
+              <Button size="lg" className="gap-2" disabled>
+                <ExternalLink className="h-5 w-5" />
+                Event Flyer — [PENDING 2026 FLYER]
               </Button>
             </div>
           </div>
