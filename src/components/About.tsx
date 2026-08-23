@@ -1,7 +1,6 @@
 import { TrendingUp, Users, Globe, Sparkles, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import flyerImage from "@/assets/aseai-flyer.jpg";
 
 const About = () => {
   const stats = [
@@ -54,7 +53,7 @@ const About = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
-                   <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+          <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
             {/* TODO(content-decision): mission text adapted to avoid "Winter School" wording (open conflict, see Hero.tsx). Replace with the approved 2026 concept note text once available. */}
             <p>
               ASEAI brings world-class scholars from the globe to Africa, to share knowledge, inspire
@@ -65,14 +64,20 @@ const About = () => {
             </p>
           </div>
 
-                    {/* Event Flyer */}
-          {/* TODO(assets): 2026 flyer not yet designed/approved. 2025 flyer shown as a dimmed placeholder only. */}
+          {/* Event Flyer */}
+          {/* TODO(assets): 2026 flyer not yet designed/approved. The 2025 flyer image is NOT shown here —
+              it displays confirmed 2025 details (Novation City/Sousse, old dates, old speakers, old
+              registration QR/deadline) that would be misleading on the 2026 page even dimmed. Using the
+              built-in placeholder.svg until the 2026 flyer is ready. */}
           <div className="mt-12 space-y-6">
-            <img
-              src={flyerImage}
-              alt="[PLACEHOLDER — 2025 flyer shown pending the approved 2026 flyer]"
-              className="w-full rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 opacity-50"
-            />
+            <div className="w-full aspect-[3/4] max-h-[500px] rounded-lg bg-muted flex flex-col items-center justify-center gap-4 border-2 border-dashed border-muted-foreground/30">
+              <img
+                src={`${import.meta.env.BASE_URL}placeholder.svg`}
+                alt="[PLACEHOLDER — 2026 event flyer not yet available]"
+                className="h-20 w-20 opacity-30"
+              />
+              <p className="text-muted-foreground text-sm">2026 flyer — pending design and approval</p>
+            </div>
             <div className="flex justify-center">
               <Button size="lg" className="gap-2" disabled>
                 <ExternalLink className="h-5 w-5" />
