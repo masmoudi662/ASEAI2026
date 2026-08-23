@@ -71,7 +71,7 @@ const Navigation = () => {
             }}
             className="flex items-center"
           >
-            <img src={logo} alt="ASEAI 2025" className="h-12 md:h-14" />
+                        <img src={logo} alt="ASEAI 2026" className="h-12 md:h-14" />
           </a>
 
           {/* Desktop Navigation */}
