@@ -33,13 +33,15 @@ const Venue = () => {
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="space-y-4">
-                {/* TODO(content-decision): venue description, rooms, accessibility, and accommodation
-                    info pending — brief requires these but they are not yet confirmed. */}
+                            <div className="space-y-4">
                 <p className="text-foreground/80 leading-relaxed">
-                  [VENUE DESCRIPTION — PENDING APPROVAL]. As a hybrid event, participants can join us
-                  either in person at ENSIAS, Mohammed V University in Rabat, Morocco, or remotely from
-                  anywhere in the world.
+                  As a hybrid event, participants can join us either in person at ENSIAS, Mohammed V
+                  University in Rabat, Morocco, or remotely from anywhere in the world.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  The venue includes a Main Amphitheater (300 seats) for opening, keynotes, panels, and
+                  closing sessions, and a second amphitheater, Amphi 2 (120 seats), for tutorials and
+                  parallel sessions. [Additional room, accessibility, and accommodation details — pending]
                 </p>
               </div>
 

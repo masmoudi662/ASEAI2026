@@ -5,7 +5,8 @@ import sarahNadi from "@/assets/sarah-nadi.jpg";
 import bruceMaxim from "@/assets/bruce-maxim.jpg";
 import houariSahraoui from "@/assets/houari-sahraoui.jpg";
 import zadiaCodabux from "@/assets/zadia-codabux.png";
-import emadShihab from "@/assets/emad-shihab.jpg";
+import emadShihab from "@/assets/emad-shihab.jfif";
+
 const invitedSpeakers = [
   { name: "Emad Shihab", affiliation: "Concordia University, Canada", status: "Accepted", image: emadShihab },
     { name: "Michel Chaudron", affiliation: "Eindhoven University of Technology, Netherlands", status: "Invited", image: michelChaudron },
