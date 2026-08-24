@@ -5,10 +5,10 @@ import sarahNadi from "@/assets/sarah-nadi.jpg";
 import bruceMaxim from "@/assets/bruce-maxim.jpg";
 import houariSahraoui from "@/assets/houari-sahraoui.jpg";
 import zadiaCodabux from "@/assets/zadia-codabux.png";
-
+import emadShihab from "@/assets/emad-shihab.jpg";
 const invitedSpeakers = [
-  { name: "Emad Shihab", affiliation: "Concordia University, Canada", status: "Accepted", image: null },
-  { name: "Michel Chaudron", affiliation: "Eindhoven University of Technology, Netherlands", status: "Invited", image: michelChaudron },
+  { name: "Emad Shihab", affiliation: "Concordia University, Canada", status: "Accepted", image: emadShihab },
+    { name: "Michel Chaudron", affiliation: "Eindhoven University of Technology, Netherlands", status: "Invited", image: michelChaudron },
   { name: "Omar", affiliation: "Trent University, Canada", status: "Accepted", image: null },
   { name: "Foutse Khomh", affiliation: "Polytechnique Montréal, Canada", status: "Invited", image: null },
   { name: "Coen De Roover", affiliation: "Vrije Universiteit Brussel, Belgium", status: "Invited", image: null },
