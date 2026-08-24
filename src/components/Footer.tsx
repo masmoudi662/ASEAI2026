@@ -6,9 +6,8 @@ const Footer = () => {
       <div className="container px-4">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h3 className="text-2xl font-bold">ASEAI 2026</h3>
-          <p className="text-background/80">
-            {/* TODO(content-decision): title wording pending approval, see Hero.tsx */}
-            [EVENT TITLE — PENDING APPROVAL]
+                    <p className="text-background/80">
+            2nd African Winter School on Software Engineering and Artificial Intelligence
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-background/70">
             <span>September 28-30, 2026</span>

@@ -24,9 +24,8 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 px-4 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom duration-700">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            {/* TODO(content-decision): title wording pending approval — conflicts: edition ordinal, "Winter" vs alternative, ASEAI vs AEAI acronym, "Software Engineering & AI" vs "Software Engineering and Intelligence" */}
-            [EVENT TITLE — PENDING APPROVAL]
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            2nd African Winter School on Software Engineering and Artificial Intelligence
           </h1>
           <p className="text-2xl md:text-3xl font-semibold text-white/95">
             ASEAI 2026
