@@ -1,37 +1,48 @@
 import { Card, CardContent } from "@/components/ui/card";
 
+const honoraryChairs = [
+  { name: "Prof. M. Rhachi", title: "Honorary Chair — President, UM5R" },
+  { name: "Prof. A. Berqia", title: "Honorary Chair — Director, ENSIAS" },
+];
+
+const generalChairs = [
+  { name: "Prof. N. Kerzazi", title: "General Chair, ENSIAS" },
+  { name: "Prof. R. Chihab", title: "General Chair, ENSIAS" },
+  { name: "Prof. A. Elafia", title: "General Chair, ENSIAS" },
+];
+
+const steeringCommittee = [
+  { name: "Prof. A. Ouni", title: "Steering Committee, ÉTS" },
+  { name: "Prof. M. Sayagh", title: "Steering Committee, ÉTS" },
+  { name: "Prof. N. Kerzazi", title: "Steering Committee, ENSIAS" },
+  { name: "[TBC]", title: "Steering Committee seat — pending confirmation" },
+];
+
+const organizationCommittee = [
+  { name: "W. Chaer", title: "Organization Committee & Volunteers, ENSIAS" },
+  { name: "M. Boussrij", title: "Organization Committee & Volunteers, ENSIAS" },
+  { name: "M. Jebraoui", title: "Organization Committee & Volunteers, ENSIAS" },
+];
+
 const Organizers = () => {
-  const honoraryChairs = [
-    { name: "Prof. M. Rhachi", title: "Honorary Chair — President, UM5R" },
-    { name: "Prof. A. Berqia", title: "Honorary Chair — Director, ENSIAS" },
-  ];
-
-  const generalChairs = [
-    { name: "Prof. N. Kerzazi", title: "General Chair, ENSIAS" },
-    { name: "Prof. R. Chihab", title: "General Chair, ENSIAS" },
-    { name: "Prof. A. Elafia", title: "General Chair, ENSIAS" },
-  ];
-
-  const steeringCommittee = [
-    { name: "Prof. A. Ouni", title: "Steering Committee, ÉTS" },
-    { name: "Prof. M. Sayagh", title: "Steering Committee, ÉTS" },
-    { name: "Prof. N. Kerzazi", title: "Steering Committee, ENSIAS" },
-    { name: "[TBC]", title: "Steering Committee seat — pending confirmation" },
-  ];
-
-  const organizationCommittee = [
-    { name: "W. Chaer", title: "Organization Committee & Volunteers, ENSIAS" },
-    { name: "M. Boussrij", title: "Organization Committee & Volunteers, ENSIAS" },
-    { name: "M. Jebraoui", title: "Organization Committee & Volunteers, ENSIAS" },
-  ];
-
   const renderGroup = (title: string, people: { name: string; title: string }[]) => (
     <div className="space-y-6">
       <h3 className="text-2xl font-bold text-center">{title}</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {people.map((person, index) => (
-          <Card key={index} className="border-0 shadow-lg" style={{ boxShadow: "var(--card-shadow)" }}>
-            <CardContent className="p-4 space-y-1 text-center">
+          <Card
+            key={index}
+            className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+            style={{ boxShadow: "var(--card-shadow)" }}
+          >
+            <div className="aspect-square overflow-hidden bg-muted flex items-center justify-center">
+              <img
+                src={`${import.meta.env.BASE_URL}placeholder.svg`}
+                alt={`[PLACEHOLDER — photo pending for ${person.name}]`}
+                className="w-16 h-16 opacity-30"
+              />
+            </div>
+            <CardContent className="p-4 space-y-2">
               <h4 className="text-base font-bold">{person.name}</h4>
               <p className="text-xs text-muted-foreground">{person.title}</p>
             </CardContent>
