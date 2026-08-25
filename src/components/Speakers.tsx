@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import ahmedHassan from "@/assets/Ahmed E. Hassan.jpg";
-import michelChaudron from "@/assets/michel-chaudron.jpg";
+import michelChaudron from "@/assets/michel-chaudron.png";
 import sarahNadi from "@/assets/Sarah Nadi.jpg";
 import bruceMaxim from "@/assets/bruce-maxim.jpg";
 import houariSahraoui from "@/assets/Houari Sahraoui.jpg";
