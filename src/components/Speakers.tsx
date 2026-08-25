@@ -24,8 +24,8 @@ import mounirGhogho from "@/assets/Mounir Ghogho.jpg";
 import shaneMcintosh from "@/assets/Shane Mcintosh.jpg";
 import walidGaaloul from "@/assets/Walid Gaaloul.jpg";
 import yutaroKashiwa from "@/assets/Yutaro Kashiwa.jpg";
-import youssefEssediq from "@/assets/Youssef-Essediq.jfif";
-import suhaibMujahid from "@/assets/Suhaib-Mujahid.jfif";
+import youssefEssediq from "@/assets/Youssef-Essediq.jpg";
+import suhaibMujahid from "@/assets/Suhaib-Mujahid.jpg";
 const invitedSpeakers = [
   { name: "Emad Shihab", affiliation: "Concordia University, Canada", status: "Accepted", image: emadShihab },
   { name: "Michel Chaudron", affiliation: "Eindhoven University of Technology, Netherlands", status: "Invited", image: michelChaudron },
