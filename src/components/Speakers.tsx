@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import ahmedHassan from "@/assets/Ahmed E. Hassan.jpg";
-import michelChaudron from "@/assets/Michel Chaudron.jpg";
+import michelChaudron from "@/assets/michel-chaudron.jpg";
 import sarahNadi from "@/assets/Sarah Nadi.jpg";
-import bruceMaxim from "@/assets/Bruce Maxim.jpg";
+import bruceMaxim from "@/assets/bruce-maxim.jpg";
 import houariSahraoui from "@/assets/Houari Sahraoui.jpg";
 import zadiaCodabux from "@/assets/zadia-codabux.png";
 import ahmedAbdellatif from "@/assets/Ahmed Abdellatif.jpg";
@@ -24,7 +24,8 @@ import mounirGhogho from "@/assets/Mounir Ghogho.jpg";
 import shaneMcintosh from "@/assets/Shane Mcintosh.jpg";
 import walidGaaloul from "@/assets/Walid Gaaloul.jpg";
 import yutaroKashiwa from "@/assets/Yutaro Kashiwa.jpg";
-
+import youssefEssediq from "@/assets/Youssef-Essediq.jfif";
+import suhaibMujahid from "@/assets/Suhaib-Mujahid.jfif";
 const invitedSpeakers = [
   { name: "Emad Shihab", affiliation: "Concordia University, Canada", status: "Accepted", image: emadShihab },
   { name: "Michel Chaudron", affiliation: "Eindhoven University of Technology, Netherlands", status: "Invited", image: michelChaudron },
@@ -43,7 +44,7 @@ const invitedSpeakers = [
   { name: "Shane McIntosh", affiliation: "University of Waterloo, Canada", status: "Invited", image: shaneMcintosh },
   { name: "Ahmed Abdellatif", affiliation: "University of Calgary, Canada", status: "Invited", image: ahmedAbdellatif },
   { name: "Aymen Saied", affiliation: "Université Laval, Canada", status: "Invited", image: aymenSaied },
-  { name: "Youssef Essediq", affiliation: "Huawei, Canada", status: "Invited", image: null },
+  { name: "Youssef Essediq", affiliation: "Huawei, Canada", status: "Invited", image: youssefEssediq },
   { name: "Eray Tuzun", affiliation: "[Affiliation — pending]", status: "Accepted", image: erayTuzun },
   { name: "Mounir Ghogho", affiliation: "[Affiliation — pending]", status: "Invited", image: mounirGhogho },
   { name: "Walid Gaaloul", affiliation: "[Affiliation — pending]", status: "Invited", image: walidGaaloul },
@@ -53,7 +54,7 @@ const invitedSpeakers = [
   { name: "Fabio Palomba", affiliation: "[Affiliation — pending]", status: "Invited", image: fabioPalomba },
   { name: "Zadia Codabux", affiliation: "University of Saskatchewan", status: "Invited", image: zadiaCodabux },
   { name: "Filipe Cogo", affiliation: "Queen's University", status: "Invited", image: filipeCogo },
-  { name: "Suhaib Mujahid", affiliation: "Mozilla", status: "Invited", image: null },
+  { name: "Suhaib Mujahid", affiliation: "Mozilla", status: "Invited", image: suhaibMujahid },
 ];
 
 const Speakers = () => {
